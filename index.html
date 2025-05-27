@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hello! College Student</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      user-select: none;
+    }
+  </style>
+</head>
+<body class="login-body" oncontextmenu="return false">
+  <div class="login-container">
+    <h2>Enter Your Password For DSA Sheets</h2>
+    <input type="password" id="password" placeholder="Enter password..." />
+    <button onclick="checkPassword()">Grant Access</button>
+  </div>
+
+  <script>
+    // Disable inspect shortcuts
+    document.addEventListener("keydown", function (e) {
+      if (
+        e.key === "F12" ||
+        (e.ctrlKey && e.shiftKey && ["I", "C", "J"].includes(e.key.toUpperCase())) ||
+        (e.ctrlKey && e.key.toLowerCase() === "u")
+      ) {
+        e.preventDefault();
+        alert("Access to developer tools is blocked 🚫");
+      }
+    });
+
+    // Base64-decoded password check
+    function checkPassword() {
+      const entered = document.getElementById("password").value;
+      const actual = atob("OTkzNjc3NzAzNg=="); // = "9936777036"
+      if (entered === actual) {
+        window.location.href = "home.html";
+      } else {
+        alert("Wrong password 😅");
+      }
+    }
+  </script>
+</body>
+</html>

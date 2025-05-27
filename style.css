@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(to right, #161314, #332d32);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-body {
+  background: linear-gradient(to right, #5a5a5a, #fff0f5);
+}
+
+.login-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  animation: fadeIn 2s ease;
+}
+
+.login-container h2 {
+  color: #1f1419;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-bottom: 20px;
+}
+
+.login-container input {
+  padding: 10px;
+  width: 80%;
+  margin-bottom: 10px;
+  border: 2px solid #57393d;
+  border-radius: 8px;
+}
+
+.login-container button {
+  background-color: #1c181a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-container button:hover {
+  background-color: #353435;
+}
+
+.home-body {
+  background: #e2aac0;
+  flex-direction: column;
+}
+
+.message-container {
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: slideIn 1.5s ease;
+}
+
+.message-container h1 {
+  color: #ff4081;
+  margin-bottom: 20px;
+}
+
+.message-container p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.message-container img {
+  width: 50%;
+  max-width: 150px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
